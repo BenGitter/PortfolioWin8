@@ -1,0 +1,42 @@
+body{
+  background-image: url("images/background2.png");
+  background-size: auto 100vh;
+  font-family: sans-serif;
+}
+
+@media screen and (min-aspect-ratio: 1600/900){
+  body{
+    background-size: 100vw auto;
+  }
+}
+
+
+/* Top Row */
+.top_row{
+  margin-top: 20px;
+  height: 60px;
+}
+
+.top_row .profile{
+  color: white;
+  float: right;
+  margin-right: 20px;
+}
+.top_row img{
+  height: 40px;
+  float: right;
+  margin-left: 10px;
+}
+.top_row .profile span{
+  display: block;
+  float: right;
+}
+
+.profile .first_name{
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 3px;
+}
+.profile .last_name{
+  font-size: 11px;
+}
