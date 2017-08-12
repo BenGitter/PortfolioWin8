@@ -9,16 +9,78 @@
 </head>
 <body>
 
-  <div class="top_row">
-    <div class="profile">
-      <img src="images/avatar.png" alt="Avatar">
-      <span class="first_name">Benjamin</span>
-      <br>	
-      <span class="last_name">van Zwienen</span>
-    </div>
-    
+  <div class="start">
+    Start
   </div>
-  
+
+  <div class="profile">
+    <img src="images/avatar.png" alt="Avatar">
+    <span class="first_name">Benjamin</span>
+    <br>	
+    <span class="last_name">van Zwienen</span>
+  </div>
+
+  <div class="content">
+    <div class="tile simon-game"
+      data-src="https://bengitter.github.io/simon-game">
+      <img src="images/simon.png" alt="Simon Game">  
+      <span class="title">Simon Game</span>  
+    </div>
+    <div class="tile leader-board"
+      data-src="https://codepen.io/benjaminvanzwienen/full/RppRbB">
+      <img src="images/leaderboard.png" alt="Leaderboard">
+      <span class="title">FCC Leaderboard</span>
+    </div>
+    <div class="tile calculator" 
+      data-src="https://bengitter.github.io/JavaScriptCalculator">
+      <img src="images/calculator.png" alt="Calculator">
+      <span class="title">Calculator</span>
+    </div>
+    <div class="tile long weather"
+      data-src="https://codepen.io/benjaminvanzwienen/full/aZzjPO">
+      <img src="images/weather.png" alt="Weather">
+      <span class="title">Weather</span>
+    </div>
+    <div class="tile night-life"
+      data-src="https://handsome-ant.glitch.me/">
+      <img src="images/bar.png" alt="Night-life coordination">
+      <span class="title">Night Life</span>
+    </div>
+    <div class="tile pomodoro"
+      data-src="https://bengitter.github.io/angular-pomodoro">
+      <img src="images/pomodoro.png" alt="Pomodoro">
+      <span class="title">Pomodoro Timer</span>
+    </div>
+    <div class="tile long twitch"
+      data-src="https://codepen.io/benjaminvanzwienen/full/EyQdxd">
+      <img src="images/twitch.png" alt="Twitch">
+      <span class="title">Twitch Status</span>
+    </div>
+  </div>
+
+  <!-- App Overlay -->
+  <div class="app-status">
+    <div class="app-back">
+      <img src="icons/back.png" alt="Back">
+    </div>
+    <div class="app-title">
+      Calculator
+    </div>
+  </div>
+
+  <div class="app-body">
+    <iframe src="" frameborder="0"></iframe>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-screen">
+    <div class="loading-img">
+      <img src="images/weather.png" alt="">
+    </div>
+    <div class="loading-text">
+      Loading...
+    </div>
+  </div>
 
   <script src="jquery.min.js"></script>
   <script src="script.js"></script>

@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
 body{
-  background-image: url("images/background2.png");
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  background-image: url("images/background3.jpg");
   background-size: auto 100vh;
   font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 2fr 10fr 10fr 1fr;
+  grid-template-rows: 40px auto 60px 1fr 40px;
+  grid-template-areas: 
+    ". . . ."
+    ". start profile ."
+    ". . . ."
+    ". content content ."
+    ". . . .";
 }
 
 @media screen and (min-aspect-ratio: 1600/900){
@@ -10,28 +26,27 @@ body{
   }
 }
 
-
-/* Top Row */
-.top_row{
-  margin-top: 20px;
-  height: 60px;
-}
-
-.top_row .profile{
+.start{
+  grid-area: start;
   color: white;
-  float: right;
-  margin-right: 20px;
+  font-size: 45px;
 }
-.top_row img{
+
+.profile{
+  grid-area: profile;
+  justify-self: end;
+  align-self: center; 
+  color: white;
+}
+.profile img{
   height: 40px;
   float: right;
   margin-left: 10px;
 }
-.top_row .profile span{
+.profile span{
   display: block;
   float: right;
 }
-
 .profile .first_name{
   font-weight: bold;
   font-size: 16px;
@@ -40,3 +55,108 @@ body{
 .profile .last_name{
   font-size: 11px;
 }
+
+.tile{
+  cursor: pointer;
+}
+.tile.long{
+  grid-column: span 2;
+}
+.tile.high{
+  grid-row: span 2;
+}
+.tile img{
+  height: 70px;
+  margin: 20px 27px 10px;
+}
+.tile.long img{
+   margin: 20px 95px 10px; 
+}
+.tile .title{
+  color: white;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.simon-game{
+  background: rgb(0, 162, 27);
+}
+.leader-board{
+  background: rgb(218, 84, 46);
+}
+.calculator{
+  background: rgb(10, 79, 183);
+}
+.weather{
+  background: rgb(46, 138, 239);
+}
+.night-life{
+  background: rgb(190, 30, 74);
+}
+.pomodoro{
+  background: rgb(0, 157, 174);
+}
+.twitch{
+  background: rgb(100, 65, 164);
+}
+
+.app-status{
+  background: black;
+  grid-column: 1/5;
+  grid-row: 1;
+  /* display: grid; */
+  grid-template-columns: 2fr 2fr 18fr 2fr;
+   display: none; 
+}
+.app-back{
+  grid-column: 2;
+  margin-top: 7px;
+  cursor: pointer;
+}
+.app-title{
+  grid-column: 3;
+  color: white;
+  margin-top: 7px;
+  font-size: 20px;
+}
+
+.app-body{
+  background: #ccc;
+  grid-column: 1/5;
+  grid-row: 2/6;
+  display: none; 
+}
+.app-body iframe{
+  width: 100%;
+  height: calc(100% - 4px);
+}
+
+.loading-screen{
+  grid-column: 1/5;
+  grid-row: 1/6;
+  /* background: black; */
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  display: grid;
+  grid-template-rows: 1fr auto auto 1fr;
+}
+.loading-img{
+  grid-row: 2;
+}
+.loading-text{
+  grid-row: 3;
+}
+
+
+.content{
+  grid-area: content;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(3, minmax(100px, 1fr)); 
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
